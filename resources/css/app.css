@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    --color-primary: #fe5f41;
+    --color-secondary: #fff4f2;
+    --color-dark: #4d312c;
+
+    --size-xs: .3rem;
+    --size-sm: .5rem;
+    --size-md: 1rem;
+    --size-xl: 1.5rem;
+    --size-xxl: 2rem;
+}
+
+.fa {
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-dark {
+    background-color: var(--color-dark);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.text-dark {
+    color: var(--color-dark);
+}
+
+@layer components {
+    .padding {
+        @apply px-3 py-4 md:px-12 md:py-6;
+    }
+
+    .title {
+        @apply font-bold text-primary leading-tight;
+        font-size: var(--size-xxl);
+    }
+
+    .form-group {
+        @apply flex flex-col gap-2;
+    }
+
+    .form-group > input, .form-group textarea, .form-group select {
+        @apply bg-gray-50 p-2 border text-sm;
+    }
+
+    .section-title {
+        @apply font-bold text-dark leading-tight;
+        font-size: var(--size-xl);
+        font-family: Lobster;
+    }
+
+    .btn {
+        @apply text-white bg-primary font-bold p-3 rounded-full shadow-xl;
+    }
+
+    .btn-link {
+        @apply text-primary font-semibold;
+    }
+
+    .help {
+        @apply text-sm text-gray-500 my-1;
+    }
+
+    .error {
+        @apply text-red-700;
+    }
+
+    .vae {
+        @apply bg-indigo-500 text-white;
+    }
+
+    .liv {
+        @apply bg-red-700 text-white;
+    }
+}
+
+@layer base {
+    section {
+        @apply padding;
+    }
+}
